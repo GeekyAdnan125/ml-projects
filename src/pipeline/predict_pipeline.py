@@ -3,6 +3,7 @@ from src.exception import CustomException
 from src.utils import load_object
 import sys
 import pandas as pd 
+
 class PredictPipline():
     def __init__(self):
         pass
@@ -11,10 +12,9 @@ class PredictPipline():
         try:
             model_path = 'artifacts/model.pkl'
             preprocessor_path = 'artifacts/preprocesser.pkl'
-            
             model=load_object(file_path=model_path)
             preprocessor = load_object(file_path=preprocessor_path)
-            print(model , preprocessor)
+            print(features)
             data_scaled = preprocessor.transform(features)
             preds = model.predict(data_scaled)
             return preds

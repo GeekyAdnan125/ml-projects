@@ -1,79 +1,79 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI;
 }
 
 body {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background:#f4f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
 
-/* Card Container */
-.login {
-    background: #ffffff;
-    padding: 40px;
-    width: 420px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+/* Home */
+.home-container {
+    text-align:center;
 }
 
-.login h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+.tagline {
+    margin:10px 0 20px;
+    color:#555;
 }
 
-/* Labels */
-.form-label {
-    font-weight: 600;
-    margin-bottom: 6px;
-    display: block;
-    color: #444;
+.card {
+    background:white;
+    padding:30px;
+    width:420px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* Inputs & Select */
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-    transition: 0.3s;
-    font-size: 14px;
+/* Form */
+.form-container {
+    background:white;
+    padding:30px;
+    width:420px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-.form-control:focus {
-    border-color: #667eea;
-    outline: none;
-    box-shadow: 0 0 5px rgba(102,126,234,0.5);
+label {
+    font-weight:600;
+    display:block;
+    margin-top:12px;
 }
 
-/* Button */
-.btn {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background: linear-gradient(135deg,#667eea,#764ba2);
-    color: white;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
+select,input {
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #ccc;
 }
 
-.btn:hover {
-    opacity: 0.9;
-    transform: scale(1.02);
+button,.btn {
+    margin-top:20px;
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:12px;
+    border-radius:6px;
+    text-decoration:none;
+    width:100%;
+    text-align:center;
 }
 
-/* Prediction Text */
-h2 {
-    text-align: center;
-    margin-top: 20px;
-    color: #222;
+button:hover,.btn:hover {
+    background:#1d4ed8;
+}
+
+.result {
+    margin-top:20px;
+    padding:15px;
+    background:#dcfce7;
+    border-radius:6px;
+    font-weight:bold;
 }

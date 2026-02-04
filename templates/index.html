@@ -1,1 +1,40 @@
-<h1>Wellcome to the home page </h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Indicator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="home-container">
+
+    <h1>Student Performance Indicator</h1>
+
+    <p class="tagline">
+        AI-powered system to predict student Maths performance.
+    </p>
+
+    <div class="card">
+        <h3> Problem Statement</h3>
+        <p>
+            This ML project predicts student maths scores based on
+            gender, ethnicity, parental education,
+            lunch type and test preparation.
+        </p>
+
+        <h3> Dataset</h3>
+        <p>
+            Kaggle Student Performance Dataset <br>
+            1000 rows • 8 columns
+        </p>
+
+        <a href="{{ url_for('predict_datapoint') }}" class="btn">
+            Try Prediction
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
