@@ -1,7 +1,6 @@
 import os
 import sys
 from dataclasses import dataclass
-
 from catboost import CatBoostRegressor
 from sklearn.ensemble import (
     AdaBoostRegressor,
@@ -95,16 +94,14 @@ class ModelTrainer:
             ## let set some score threshold
             threshold = 0.6
             if best_model_score<threshold:
-                raise CustomException("No best model found" , sys)
+                raise CustomException("No best model found",sys)
             
             logging.info(f"Best found model on the both training and test dataset")
-
+            best_model.fit(X_train, y_train)    
             save_object(
                 file_path=self.model_trainer_config.trained_model_file_path,
                 obj=best_model
             )
-            
-            best_model.fit(X_train, y_train)
             y_pred = best_model.predict(X_test)
             r2_square = r2_score(y_test, y_pred)  
             return r2_square

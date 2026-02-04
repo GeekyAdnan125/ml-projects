@@ -21,7 +21,7 @@ class DataIngestionConfig:
 class DataIngestion:
     def __init__(self):
         self.ingestion_config = DataIngestionConfig()
-        
+
     def initiate_date_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
